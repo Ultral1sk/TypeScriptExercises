@@ -1,5 +1,4 @@
 import chalk from 'chalk';
-
 /*
 
 Intro:
@@ -26,8 +25,14 @@ Run this exercise:
 
 */
 
+interface insideUsersArrayTypes {
+    [index: number]: string;
+    name : string;
+    age : string | number;
+    occupation : string,
+}
 
-const users: unknown[] = [
+const users: insideUsersArrayTypes[] = [
     {
         name: 'Max Mustermann',
         age: 25,
@@ -40,7 +45,7 @@ const users: unknown[] = [
     }
 ];
 
-function logPerson(user: unknown) {
+function logPerson(user: insideUsersArrayTypes) {
     console.log(` - ${chalk.green(user.name)}, ${user.age}`);
 }
 
