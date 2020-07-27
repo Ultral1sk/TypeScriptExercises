@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import { isBoolean } from 'util';
 
 /*
 
@@ -48,17 +49,20 @@ const persons: Person[] = [
     { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' }
 ];
 
-function isAdmin(person: Person) {
+function isAdmin( person: Person): person is Admin {
+    // console.log(`insideisAdmin`,person)
     return person.type === 'admin';
+
 }
 
-function isUser(person: Person) {
+function isUser(person: Person): person is User {
     return person.type === 'user';
 }
 
 function logPerson(person: Person) {
-    let additionalInformation: string = '';
-    if (isAdmin(person)) {
+    let additionalInformation: string= '';
+    
+    if ( isAdmin(person)) {
         additionalInformation = person.role;
     }
     if (isUser(person)) {
