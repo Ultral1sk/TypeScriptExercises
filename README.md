@@ -1,3 +1,6 @@
+Interesting TypeScript exercises from mdevils user on github 
+https://github.com/mdevils/typescript-exercises
+
 # TypeScript exercises
 
 The goal: Let everyone play with many different TypeScript features
